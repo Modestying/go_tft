@@ -2,11 +2,12 @@ package engine
 
 import (
 	"fmt"
+
+	"goltf/cmd/ltf/srv"
 )
 
 var (
 	LtfEngine *Engine
-	Engine    string
 )
 
 func init() {
@@ -17,5 +18,6 @@ type Engine struct {
 }
 
 func (e *Engine) Start() {
-	fmt.Printf("Start Game Engine")
+	fmt.Println("Start Game Engine")
+	srv.ShowVersion()
 }
